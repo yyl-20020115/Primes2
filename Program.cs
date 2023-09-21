@@ -29,12 +29,16 @@ public class Program
             if (IsPrime(i))
                 yield return i;
     }
+
+    /// <summary>
+    /// sqrt((2*3*5*7...)^2-1)/(2*3*5*7...) = i=(i+11)/12
+    /// </summary>
     static void DoTest()
     {
         BigDecimal i = 0;
         BigDecimal vs = 1.0;
         BigDecimal pp = 1;
-        BigDecimal eleven =new(11.0);
+        BigDecimal eleven = new(11.0);
         BigDecimal twelve = new(12.0);
         var lvs = new List<BigDecimal>();
         int c = 0;

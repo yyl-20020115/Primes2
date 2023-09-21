@@ -793,12 +793,12 @@ public static class BigDecimalMath
         // No optimization is done
         return BigMath.Round(Subtract(value, subtrahend), mc);
     }
-
-    public static BigDecimal Sqrt(this BigDecimal value)
+    
+    public static BigDecimal Sqrt(this BigDecimal value, MathContext? mc = null)
     {
-        MathContext mc = MathContext.DecimalBig;
-        BigDecimal deviation = value;
-        BigDecimal last = deviation;
+        mc ??= MathContext.DecimalBig;
+        var deviation = value;
+        var last = deviation;
         while (deviation.CompareTo(BigDecimal.Zero) > 0)
         {
             deviation = (deviation.Add(value.Divide(deviation, mc))).Divide(BigDecimal.Two, mc);

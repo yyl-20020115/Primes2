@@ -1235,7 +1235,7 @@ public sealed partial class BigDecimal : IComparable<BigDecimal>, IEquatable<Big
 
     public static BigDecimal operator /(BigDecimal a, BigDecimal b) =>
         // In case of implicit operators apply the precision of the dividend
-        BigDecimalMath.Divide(a, b, MathContext.Decimal128);
+        BigDecimalMath.Divide(a, b, MathContext.DecimalBig);
 
     public static BigDecimal operator %(BigDecimal a, BigDecimal b) =>
         // In case of implicit operators apply the precision of the dividend

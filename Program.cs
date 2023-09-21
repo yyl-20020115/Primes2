@@ -49,11 +49,12 @@ public class Program
             i = (i+ eleven) / twelve;
             var d = s - i;
             Console.WriteLine($"v={v} s={s},i={i},d={d}");
-            if (c++ == 16) break;
+            if (c++ == 20) break;
         }
     }
     static void Main(string[] args)
     {
         DoTest();
+        Console.ReadKey();
     }
 }

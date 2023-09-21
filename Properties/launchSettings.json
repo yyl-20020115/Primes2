@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Primes2": {
+      "commandName": "Project",
+      "workingDirectory": "$(ProjectDir)"
+    }
+  }
+}

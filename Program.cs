@@ -35,13 +35,14 @@ public class Program
     /// </summary>
     static void DoTest()
     {
-        BigDecimal i = 0;
-        BigDecimal vs = 1.0;
-        BigDecimal pp = 1;
+        var i = BigDecimal.Zero;
+        var vs = BigDecimal.One;
+        var pp = vs;
         BigDecimal eleven = new(11.0);
         BigDecimal twelve = new(12.0);
         var lvs = new List<BigDecimal>();
         int c = 0;
+        using var @out = new StreamWriter("result.txt");
         foreach (var v in NextPrime())
         {
             lvs.Add(v);
@@ -52,13 +53,12 @@ public class Program
            
             i = (i+ eleven) / twelve;
             var d = s - i;
-            Console.WriteLine($"v={v} s={s},i={i},d={d}");
+            @out.WriteLine($"v={v}\ns={s}\ni={i}\nd={d}");
             if (c++ == 20) break;
         }
     }
     static void Main(string[] args)
     {
         DoTest();
-        Console.ReadKey();
     }
 }

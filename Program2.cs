@@ -35,17 +35,18 @@ public class Program2
         var vs = 1.0;
         long pp = 1;
         var lvs = new List<long>();
+        int c = 0;
         foreach (var v in NextPrime())
         {
             lvs.Add(v);
             pp *= v;
-            vs *= (v * v);
+            vs *= ((v) * (v));
 
             var s = Math.Sqrt(vs - 1) / pp;
             i = (i + 11.0) / 12.0;
             var d = s - i;
             Console.WriteLine($"v={v} s={s},i={i},d={d}");
-            if (d == 0) break;
+            if (d == 0||c++>=20) break;
         }
         i = 0;
         for (long v = 2; v <= lvs.Max(); v++)

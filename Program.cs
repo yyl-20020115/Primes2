@@ -47,7 +47,7 @@ public class Program
         {
             lvs.Add(v);
             pp *= v;
-            vs *= (v * v);
+            vs *= (v - 1) * (v - 1);
             var vsm = vs - 1; 
             var s = vsm.Sqrt() / pp;
            
@@ -57,7 +57,7 @@ public class Program
             if (c++ == 20) break;
         }
     }
-    static void Main(string[] args)
+    public static void Main(string[] args)
     {
         DoTest();
     }

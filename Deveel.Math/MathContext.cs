@@ -35,7 +35,7 @@ public sealed class MathContext : IEquatable<MathContext>
     /// A <see cref="MathContext"/> which corresponds to the IEEE 754r quadruple decimal precision 
     /// format: 34 digit precision and <see cref="Deveel.Math.RoundingMode.HalfEven"/> rounding.
     /// </summary>
-    public static readonly MathContext DecimalBig = new(102, RoundingMode.HalfEven);
+    public static readonly MathContext DecimalBig = new(78, RoundingMode.HalfEven);
 
     /// <summary>
     /// A <see cref="MathContext"/> which corresponds to the IEEE 754r quadruple decimal precision 

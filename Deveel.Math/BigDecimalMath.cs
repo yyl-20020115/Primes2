@@ -796,7 +796,7 @@ public static class BigDecimalMath
     
     public static BigDecimal Sqrt(this BigDecimal value, MathContext? mc = null)
     {
-        mc ??= MathContext.DecimalBig;
+        mc ??= MathContext.Decimal128;
         var deviation = value;
         var last = deviation;
         while (deviation.CompareTo(BigDecimal.Zero) > 0)
@@ -806,12 +806,6 @@ public static class BigDecimalMath
             last = deviation;
         }
         return deviation;
-
-
-        //if (n.CompareTo(BigDecimal.Zero) < 0) return BigDecimal.Zero;
-        //var x = n.Divide(BigDecimal.Two, MathContext.Decimal128);
-        //while (x.Subtract(x = SqrtIteration(x, n)).Abs().CompareTo(BigDecimal.Zero) > 0) ;
-        //return x;
     }
 
     //private static BigDecimal SqrtIteration(BigDecimal x, BigDecimal n) 
